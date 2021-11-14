@@ -4,12 +4,17 @@ namespace Domain.Entities
 {
     public class Pedido : Base
     {
+        protected Pedido()
+        {
+        }
+
         public Pedido(Guid clienteId,
             DateTime iniciadoEm, 
             DateTime finalizadoEm, 
             TipoFrete tipoFrete,
             Status status,
             string observacao)
+                : this()
         {
             ClienteId = clienteId;
             IniciadoEm = iniciadoEm;

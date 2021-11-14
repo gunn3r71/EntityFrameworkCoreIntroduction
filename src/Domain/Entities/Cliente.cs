@@ -2,11 +2,16 @@
 {
     public class Cliente : Base
     {
+        protected Cliente()
+        {
+        }
+
         public Cliente(string nome,
             string telefone,
             string cep,
             string cidade, 
             string estado)
+                : this()
         {
             Nome = nome;
             Telefone = telefone;
@@ -22,6 +27,6 @@
         public string Estado { get; private set; }
 
         //Navigation properties
-        public IEnumerable<Pedido> Pedidos { get; private set; }
+        public IEnumerable<Pedido>? Pedidos { get; private set; }
     }
 }

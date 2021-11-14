@@ -27,8 +27,8 @@
         public int? Desconto { get; private set; }
 
         //Navigation properties
-        public Produto Produto { get; private set; }
-        public Pedido Pedido { get; private set; }
+        public Produto? Produto { get; private set; }
+        public Pedido? Pedido { get; private set; }
 
     }
 }
