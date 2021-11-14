@@ -1,0 +1,27 @@
+﻿namespace Domain.Entities
+{
+    public class Cliente : Base
+    {
+        public Cliente(string nome,
+            string telefone,
+            string cep,
+            string cidade, 
+            string estado)
+        {
+            Nome = nome;
+            Telefone = telefone;
+            Cep = cep;
+            Cidade = cidade;
+            Estado = estado;
+        }
+
+        public string Nome { get; private set; }
+        public string Telefone { get; private set; }
+        public string Cep { get; private set; }
+        public string Cidade { get; private set; }
+        public string Estado { get; private set; }
+
+        //Navigation properties
+        public IEnumerable<Pedido> Pedidos { get; private set; }
+    }
+}
